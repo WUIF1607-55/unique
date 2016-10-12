@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>图片晃动</title>
+	<script>
+   $(function(){
+   	var inner=$(".inner")[0];
+   	inner.onmouseover=function(){
+   		animate(inner,{right:10},200)
+
+   	} 
+   	inner.onmouseout=function(){
+   		animate(inner,{right:0},200)
+
+   	} 
+
+   })
+
+
+	</script>
+</head>
+<style>
+	.box{
+		width:1024px;height:500px;
+		position:relative;
+		background:red;
+
+
+	}
+	.inner{
+        width:200px;height:500px;
+        position: absolute;
+        right:0;top:0;
+        background:blue;
+	}
+</style>
+<body>
+	<div class="box"><div class="inner"></div></div>
+	
+</body>
+</html>
